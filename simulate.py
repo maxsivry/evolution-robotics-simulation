@@ -1,13 +1,21 @@
 import time as t
 import pybullet as p
+import pybullet_data
 physicsClient = p.connect(p.GUI)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
 # to disable the sidebar uncomment following line
-p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
+p.configureDebugVisualizer()
+
+#initiate gravitational force on z axis
+p.setGravity(0,0,-9.8)
+
+#create floor
+planeId = p.loadURDF("plane.urdf")
 
 #create first box
-p.loadSDF("box.sdf")
+p.loadSDF("boxes.sdf")
 for i in range(1000):
     p.stepSimulation()
-    t.sleep(1/60)
+    t.sleep(2/60)
 p.disconnect()
