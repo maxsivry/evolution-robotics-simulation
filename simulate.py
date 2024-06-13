@@ -3,7 +3,10 @@ import pybullet as p
 physicsClient = p.connect(p.GUI)
 
 # to disable the sidebar uncomment following line
-#p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
+p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
+
+#create first box
+p.loadSDF("box.sdf")
 for i in range(1000):
     p.stepSimulation()
     t.sleep(1/60)
