@@ -14,7 +14,7 @@ p.setGravity(0,0,-9.8)
 planeId = p.loadURDF("plane.urdf")
 
 #create first box
-p.loadSDF("boxes.sdf")
+p.loadSDF("world.sdf")
 for i in range(1000):
     p.stepSimulation()
     t.sleep(2/60)
