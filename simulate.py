@@ -13,8 +13,13 @@ p.setGravity(0,0,-9.8)
 #create floor
 planeId = p.loadURDF("plane.urdf")
 
-#create first box
+#create world
 p.loadSDF("world.sdf")
+
+#create robo
+robotID = p.loadURDF("body.urdf")
+
+#run simul
 for i in range(1000):
     p.stepSimulation()
     t.sleep(2/60)
