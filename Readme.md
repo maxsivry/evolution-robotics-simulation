@@ -1,2 +1,1 @@
-welcome to my evolutionary robotics simulation!
-just to double check . . .
+welcome to my evolutionary robotics simulation! For anyone curious, I have been following along to lectures by Josh Bongard and his freely available reddit course to create and experiment with my own design of semi intellillegent robotic simluation.
